@@ -1,0 +1,15 @@
+kind,id,role,label,leakage_status
+module,observed_pm,observed,"Observed PM | IERS C04 xp, yp | PM observations",history_observed
+module,pm_to_gam,physics,"PM-to-GAM physical transformation | Wilson inversion | chi_x^G, chi_y^G",derived_from_observed_pm
+note,gam_not_independent,physics,"GAM is inferred from PM, not independently observed",method_note
+module,forecasting,model,Excitation-domain forecasting | Chiformer | predict chi^S,model
+input,historical_gam,observed,historical GAM chi^S_{t0-L+1:t0},history_observed
+input,historical_eam,observed,historical EAM AAM/OAM/HAM/SLAM,history_observed
+input,future_covariates,forecast_available,future EAM forecast or pseudo-forecast only; DOY Fourier features,forecast_side_covariate_only
+guard,no_future_gam_input,target,No future GAM input,excluded_model_input
+guard,no_future_pm_input,target,No future PM input,excluded_model_input
+output,predicted_short_gam,target,future short-to-seasonal GAM hat chi^S_{t0+1:t0+H},prediction_target
+module,gam_to_pm,physics,GAM-to-PM reconstruction | add extrapolated ultra-low-frequency background | Wilson forward recurrence,post_prediction_reconstruction
+output,pm_evaluation,evaluation,"PM-domain output and evaluation | hat xp, hat yp",evaluation_only
+time_axis,history_window,observed,historical window L=720 days,history_observed
+time_axis,forecast_horizon,target,forecast horizon H=30 days,prediction_period

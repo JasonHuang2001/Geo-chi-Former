@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "title": "Prepared 14-day Earth angular-momentum forecast input",
+  "filename": "eam14forecast_daily.csv",
+  "columns": [
+    "issue_date", "date", "lead_day", "mjd",
+    "aam_x", "aam_y", "aam_z", "aam_vx", "aam_vy", "aam_vz",
+    "oam_x", "oam_y", "oam_z", "oam_vx", "oam_vy", "oam_vz",
+    "ham_x", "ham_y", "ham_z", "ham_vx", "ham_vy", "ham_vz",
+    "slam_x", "slam_y", "slam_z"
+  ],
+  "date_columns": ["issue_date", "date"],
+  "integer_columns": ["lead_day"],
+  "numeric_columns": [
+    "lead_day", "mjd",
+    "aam_x", "aam_y", "aam_z", "aam_vx", "aam_vy", "aam_vz",
+    "oam_x", "oam_y", "oam_z", "oam_vx", "oam_vy", "oam_vz",
+    "ham_x", "ham_y", "ham_z", "ham_vx", "ham_vy", "ham_vz",
+    "slam_x", "slam_y", "slam_z"
+  ],
+  "required_by_loader": [
+    "issue_date", "date", "lead_day",
+    "aam_x", "aam_y", "aam_vx", "aam_vy",
+    "oam_x", "oam_y", "oam_vx", "oam_vy",
+    "ham_x", "ham_y", "ham_vx", "ham_vy",
+    "slam_x", "slam_y"
+  ],
+  "primary_key": ["issue_date", "date", "lead_day"],
+  "lead_relationship": {
+    "issue_date_column": "issue_date",
+    "target_date_column": "date",
+    "lead_column": "lead_day",
+    "allowed_leads": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+    "rows_per_complete_issue": 14
+  },
+  "units": {
+    "issue_date": "UTC calendar day",
+    "date": "UTC calendar day",
+    "lead_day": "day, zero based",
+    "mjd": "day",
+    "aam_*": "dimensionless excitation",
+    "oam_*": "dimensionless excitation",
+    "ham_*": "dimensionless excitation",
+    "slam_*": "dimensionless excitation"
+  },
+  "loader_transform": "EAM excitation values are multiplied by radians-to-mas after mass-plus-motion aggregation.",
+  "paper_snapshot": {
+    "rows": 19012,
+    "issue_date_min": "2021-05-20",
+    "issue_date_max": "2025-12-08",
+    "date_min": "2021-05-20",
+    "date_max": "2025-12-21",
+    "issue_dates": 1358
+  }
+}

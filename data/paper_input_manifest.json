@@ -1,0 +1,25 @@
+{
+  "schema_version": 2,
+  "redistributed": false,
+  "instructions": "Prepared inputs are not distributed. See data/README.md for preparation details.",
+  "files": {
+    "eop_data_xy_EAM.csv": {
+      "purpose": "Daily polar-motion and EAM analysis input",
+      "size_bytes": 4337455,
+      "sha256": "CEC7BB2B64C66C9F9E852381187A5620036EA01E03D37010ECEE7AC7293470F2",
+      "schema": "data/schemas/eop_eam_daily.schema.json",
+      "rows": 18263,
+      "coverage": "1976-01-01/2025-12-31",
+      "redistributed": false
+    },
+    "eam14forecast_daily.csv": {
+      "purpose": "Forecast-side EAM input for the paper checkpoint",
+      "size_bytes": 9768889,
+      "sha256": "0705FA92124484292A75B09E7545D7D562CB4B0D0CFD77F19E9EA98B93BEBA1A",
+      "schema": "data/schemas/eam_14day_forecast.schema.json",
+      "rows": 19012,
+      "coverage": "issue dates 2021-05-20/2025-12-08; target dates through 2025-12-21",
+      "redistributed": false
+    }
+  }
+}

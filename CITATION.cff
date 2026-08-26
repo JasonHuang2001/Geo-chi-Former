@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, cite the Geo-chi-Former manuscript and archived software record when available."
+type: software
+title: "Geo-chi-Former: A Geodynamically Constrained Excitation-Domain Transformer for Short-Term Polar Motion Prediction"
+authors:
+  - family-names: Huang
+    given-names: Junhai
+  - family-names: Zhu
+    given-names: Boyang
+  - family-names: Liu
+    given-names: Xiaodong
+version: 0.1.0
+repository-code: "https://github.com/JasonHuang2001/Geo-chi-Former"
+license: Apache-2.0
+keywords:
+  - polar motion
+  - Earth orientation parameters
+  - geophysical angular momentum
+  - time-series forecasting
+  - Transformer

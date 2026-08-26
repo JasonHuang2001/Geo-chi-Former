@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments and local configuration
+.venv/
+venv/
+env/
+.env
+
+# Editors
+.idea/
+.vscode/
+
+# Temporary and generated output
+tmp/
+.tmp_mpl/
+outputs/
+*.log
+*.zip
+
+# Prepared and raw third-party data
+data/.cache/
+data/eop_data_xy_EAM.csv
+data/eam14forecast_daily.csv
+data/eopc04_20u24.1962-now.csv
+data/raw/
+data/downloads/
+data/staging/
+data/bulletina/
+data/**/*.nc
+data/**/*.grib
+data/**/*.grb
+
+# Keep only the paper checkpoint in version control
+checkpoints/**/*.pth
+!checkpoints/paper_main/chiformer_forecasting_best.pth
+
+# Large interpretability intermediates
+**/cross_time_attention_long.csv
+**/attention/*.npy
+**/attention/*.npz

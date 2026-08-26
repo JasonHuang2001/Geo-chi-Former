@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "title": "Prepared daily polar-motion and Earth angular-momentum analysis input",
+  "filename": "eop_data_xy_EAM.csv",
+  "columns": [
+    "date", "xpole", "ypole",
+    "aam_x", "aam_y", "aam_z", "aam_vx", "aam_vy", "aam_vz",
+    "ham_x", "ham_y", "ham_z", "ham_vx", "ham_vy", "ham_vz",
+    "oam_x", "oam_y", "oam_z", "oam_vx", "oam_vy", "oam_vz",
+    "slam_x", "slam_y", "slam_z"
+  ],
+  "date_columns": ["date"],
+  "numeric_columns": [
+    "xpole", "ypole",
+    "aam_x", "aam_y", "aam_z", "aam_vx", "aam_vy", "aam_vz",
+    "ham_x", "ham_y", "ham_z", "ham_vx", "ham_vy", "ham_vz",
+    "oam_x", "oam_y", "oam_z", "oam_vx", "oam_vy", "oam_vz",
+    "slam_x", "slam_y", "slam_z"
+  ],
+  "required_by_loader": [
+    "date", "xpole", "ypole",
+    "aam_x", "aam_y", "aam_vx", "aam_vy",
+    "oam_x", "oam_y", "oam_vx", "oam_vy",
+    "ham_x", "ham_y", "ham_vx", "ham_vy",
+    "slam_x", "slam_y"
+  ],
+  "primary_key": ["date"],
+  "daily_date_column": "date",
+  "units": {
+    "date": "UTC calendar day",
+    "xpole": "arcsecond",
+    "ypole": "arcsecond",
+    "aam_*": "dimensionless excitation",
+    "oam_*": "dimensionless excitation",
+    "ham_*": "dimensionless excitation",
+    "slam_*": "dimensionless excitation"
+  },
+  "loader_transform": "xpole and ypole are multiplied by 1000 to mas; EAM excitation values are multiplied by radians-to-mas after mass-plus-motion aggregation.",
+  "paper_snapshot": {
+    "rows": 18263,
+    "date_min": "1976-01-01",
+    "date_max": "2025-12-31"
+  }
+}
