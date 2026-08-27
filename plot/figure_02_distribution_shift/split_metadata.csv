@@ -1,4 +1,0 @@
-split,split_label,n_samples,seq_len,pred_len,first_issue_date,last_issue_date,history_window_days,ul_gap_window_days
-train,Training,8371,360,30,1993-01-01,2015-12-02,360,1095
-val,Validation,1433,360,30,2016-01-01,2019-12-03,360,1095
-test,Test,309,360,30,2020-01-02,2025-11-27,360,1095
