@@ -14,7 +14,7 @@ Geo-chi-Former forecasts short-term polar motion in the geophysical angular-mome
 | `data/EOP_loader.py` | PM/EAM dataset construction and preprocessing |
 | `data/eop_core.py` | Shared excitation-domain data functions |
 | `utils/integrator.py` | Wilson inversion and polar-motion reconstruction |
-| `data/example_eop_eam.csv` | Illustrative loader-compatible CSV |
+| `data/example_eop_eam.csv` | Illustrative prepared-data CSV layout |
 | `figures/previews/` | Generated manuscript figures |
 
 Training workflows, experiment configurations, model checkpoints, plotting programs, and intermediate results are intentionally omitted. The retained Python files require PyTorch, NumPy, pandas, and scikit-learn; these dependencies are listed in `requirements.txt`.
@@ -23,7 +23,7 @@ Training workflows, experiment configurations, model checkpoints, plotting progr
 
 The model uses daily polar motion from IERS and Earth angular-momentum products from GFZ/ESMGFZ and the ETH Zurich prediction comparison service. These third-party data are not redistributed here.
 
-Download links, required units, column names, and preparation notes are provided in [`data/README.md`](data/README.md). The included [`data/example_eop_eam.csv`](data/example_eop_eam.csv) shows the minimum daily CSV layout expected by the loader; its numeric values are illustrative only.
+Download links, required units, column names, and preparation notes are provided in [`data/README.md`](data/README.md). The included [`data/example_eop_eam.csv`](data/example_eop_eam.csv) shows the daily column layout expected by the loader; its three rows and numeric values are illustrative only.
 
 ## Figures
 

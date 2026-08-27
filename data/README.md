@@ -32,7 +32,7 @@ date,xpole,ypole,aam_x,aam_y,aam_vx,aam_vy,oam_x,oam_y,oam_vx,oam_vy,ham_x,ham_y
 
 The loader converts polar motion from arcseconds to milliarcseconds. For AAM, OAM, and HAM it adds the mass and motion terms; SLAM contributes its mass terms. The resulting excitation components are converted from radians to milliarcseconds internally.
 
-[`example_eop_eam.csv`](example_eop_eam.csv) demonstrates the required structure with three synthetic rows. It is a format example only and must not be used as scientific input.
+[`example_eop_eam.csv`](example_eop_eam.csv) demonstrates the required columns with three synthetic rows. It is intentionally too short to initialize the dataset and must not be used as scientific input.
 
 ## Optional forecast CSV
 
