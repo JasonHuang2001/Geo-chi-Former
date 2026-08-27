@@ -1,0 +1,73 @@
+{
+  "common": {
+    "pred_len": 30,
+    "num_layers": 2,
+    "nhead": 4,
+    "dropout": 0.2,
+    "batch_size": 128,
+    "weight_decay": 0.001,
+    "use_eam": true,
+    "use_time": true,
+    "use_revin": true,
+    "lambda_pm": 5.0,
+    "seed": 0
+  },
+  "runs": [
+    {
+      "model": "DLinear",
+      "target_space": "pm",
+      "seq_len": 720,
+      "hidden_size": 64,
+      "epochs": 500,
+      "learning_rate": 0.0003,
+      "moving_avg": 7,
+      "individual": true
+    },
+    {
+      "model": "DLinear",
+      "target_space": "chi",
+      "seq_len": 720,
+      "hidden_size": 64,
+      "epochs": 500,
+      "learning_rate": 0.0003,
+      "moving_avg": 61,
+      "individual": true
+    },
+    {
+      "model": "LSTM",
+      "target_space": "pm",
+      "seq_len": 720,
+      "hidden_size": 128,
+      "epochs": 150,
+      "learning_rate": 0.0001
+    },
+    {
+      "model": "LSTM",
+      "target_space": "chi",
+      "seq_len": 360,
+      "hidden_size": 128,
+      "epochs": 150,
+      "learning_rate": 0.0001
+    },
+    {
+      "model": "PatchTST",
+      "target_space": "pm",
+      "seq_len": 720,
+      "hidden_size": 64,
+      "epochs": 150,
+      "learning_rate": 0.0001,
+      "patch_len": 16,
+      "stride": 8
+    },
+    {
+      "model": "PatchTST",
+      "target_space": "chi",
+      "seq_len": 720,
+      "hidden_size": 128,
+      "epochs": 150,
+      "learning_rate": 0.0001,
+      "patch_len": 16,
+      "stride": 8
+    }
+  ]
+}

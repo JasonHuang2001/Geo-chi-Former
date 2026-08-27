@@ -7,9 +7,11 @@ env/
 .idea/
 .vscode/
 *.log
+checkpoints/
 
 # Local third-party data
 data/eop_data_xy_EAM.csv
 data/eam14forecast_daily.csv
 data/raw/
 data/downloads/
+data/.cache/
